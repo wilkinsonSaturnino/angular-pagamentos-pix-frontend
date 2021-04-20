@@ -1,0 +1,35 @@
+<div>
+    <h2>Lista de Usuários</h2>
+    <br/>
+    <div class="row">
+        <div class="col-sm">
+            <table *ngIf="usuarios.length > 0" class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Agência</th>
+                        <th>Conta</th>
+                        <th>Dígito</th>
+                        <th>Ações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr *ngFor = "let usuario of usuarios">
+                        <td> {{ usuario.nome }} </td>
+                        <td> {{ usuario.agencia }} </td>
+                        <td> {{ usuario.conta }} </td>
+                        <td> {{ usuario.digito }} </td>
+                        <td>
+                            <button type="button" class="btn btn-info me-2" (click) = "goToUsuarioUpdate(usuario.id)">Editar</button>
+                            <button type="button" class="btn btn-danger" (click) = "deletarUsuario(usuario)">Deletar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+            <p *ngIf="usuarios.length == 0">Nenhum usuário cadastrado.</p>
+        </div>
+    </div>
+
+    <button type="button" class="btn btn-primary me-2" (click)="goToUsuarioAdd()">Novo</button>
+
+</div>

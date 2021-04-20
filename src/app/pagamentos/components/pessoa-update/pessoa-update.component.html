@@ -1,0 +1,33 @@
+<div class="col-md-8 offset-md-3">
+    <h3>Atualização de Usuário</h3>
+    <form (ngSubmit) = "onSubmit()">
+
+        <div class="mb-3">
+            <label class="mb-3">Nome</label>
+            <input id="nome" type="text" class="form-control" name="nome"
+                [(ngModel)] = "pessoa.nome">
+        </div>
+
+        <div class="mb-3">
+            <label class="mb-3">Agência</label>
+            <input id="agencia" type="text" class="form-control" name="agencia"
+                [(ngModel)] = "pessoa.agencia">
+        </div>
+
+        <div class="mb-3">
+            <label class="mb-3">Conta</label>
+            <input id="conta" type="text" class="form-control" name="conta"
+                [(ngModel)] = "pessoa.conta">
+        </div>
+
+        <div class="mb-3">
+            <label class="mb-3">Dígito</label>
+            <input id="digito" type="text" class="form-control" name="digito"
+                [(ngModel)] = "pessoa.digito">
+        </div>        
+
+        <button type="submit" class="btn btn-primary me-2">Salvar</button>
+        <button type="button" class="btn btn-secondary" (click)="goToUsuarioList()">Cancelar</button>
+
+    </form>
+</div>

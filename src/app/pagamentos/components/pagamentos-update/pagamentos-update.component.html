@@ -1,0 +1,50 @@
+<div class="col-md-8 offset-md-3">
+    <h3>Atualização de Pagamento</h3>
+    <form (ngSubmit) = "onSubmit()">
+
+        <div class="mb-3">
+            <input id="nome" type="text" class="form-control" name="nome" disabled
+                [(ngModel)] = "pessoa.nome">
+        </div>        
+
+        <div class="mb-3">
+            <label class="mb-3">Nome do Destinatário</label>
+            <input id="nomeDestinatario" type="text" class="form-control" name="nomeDestinatario"
+                [(ngModel)] = "pagamento.nomeDestinatario">
+        </div>
+
+        <div class="mb-3">
+            <label class="mb-3">CPF</label>
+            <input id="cpf" type="text" class="form-control" name="cpf"
+                [(ngModel)] = "pagamento.cpf">
+        </div>
+
+        <div class="mb-3">
+            <label class="mb-3">Chave PIX</label>
+            <input id="chavePix" type="text" class="form-control" name="chavePix"
+                [(ngModel)] = "pagamento.chavePix">
+        </div>
+
+        <div class="mb-3">
+            <label class="mb-3">Valor</label>
+            <input id="valor" type="text" class="form-control" name="valor"
+                [(ngModel)] = "pagamento.valor">
+        </div>
+
+        <div class="mb-3">
+            <label class="mb-3">Data de Pagamento</label>
+            <input id="dataPagamento" type="text" class="form-control" name="dataPagamento"
+                [(ngModel)] = "pagamento.dataPagamento">
+        </div>
+
+        <div class="mb-3">
+            <label class="mb-3">Descrição</label>
+            <input id="descricao" type="text" class="form-control" name="descricao"
+                [(ngModel)] = "pagamento.descricao">
+        </div>        
+
+        <button type="submit" class="btn btn-primary me-2">Salvar</button>
+        <button type="button" class="btn btn-secondary" (click)="goToPagamentosList()">Cancelar</button>
+
+    </form>
+</div>

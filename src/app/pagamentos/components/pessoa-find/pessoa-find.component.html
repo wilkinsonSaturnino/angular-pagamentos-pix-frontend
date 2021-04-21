@@ -35,12 +35,14 @@
                         <td>
                             <button title="Listar Pagamentos" type="button" class="btn btn-primary bi bi-card-checklist me-2" (click) = "goToPagamentosList(usuario.id)"></button>
                             <button title="Cadastrar Pagamento" type="button" class="btn btn-success bi bi-cart-check me-2" (click) = "goToPagamentoAdd(usuario.id)"></button>
-                            <button title="Montante por mês" type="button" class="btn btn-info bi bi-pie-chart" (click) = "openDialog()"></button>
+                            <button title="Montante por mês" type="button" class="btn btn-info bi bi-pie-chart" (click) = "openDialog(usuario.id)"></button>
                         </td>
                     </tr>
                 </tbody>
             </table>
+
             <p *ngIf="usuarios.length == 0">Nenhum usuário encontrado. Para listar faça a busca no campo acima.</p>
+            
         </div>
     </div>
 </div>

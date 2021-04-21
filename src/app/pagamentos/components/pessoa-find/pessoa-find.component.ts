@@ -12,6 +12,7 @@ export class PessoaFindComponent implements OnInit {
 
   pessoa: Pessoa = new Pessoa;
   usuarios: Pessoa[] = new Array;
+  anos: number[];
 
   constructor(private pagamentosService: PagamentosService, 
     private router: Router) { }
@@ -43,8 +44,10 @@ export class PessoaFindComponent implements OnInit {
     this.router.navigate(['/montante-por-mes', idUsuario]);
   }
 
-  openDialog(): void {
-    console.log('Implementar o dialog do Bootstrap com select dentro.');
+  openDialog(idUsuario: number): void {
+    this.pagamentosService.getMaiorMenorAnoUsuario(idUsuario).subscribe(ano => {
+      this.anos = ano;
+    });
   } 
 
 }

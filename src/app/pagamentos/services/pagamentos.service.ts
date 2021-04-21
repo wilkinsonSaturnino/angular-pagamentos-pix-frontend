@@ -13,6 +13,7 @@ export class PagamentosService {
   private URL_USUARIO_POR_NOME = 'http://localhost:8082/api/v1/usuarios/por-nome';
   private URL_PAGAMENTO = 'http://localhost:8082/api/v1/pagamentos';
   private URL_PAGAMENTO_POR_USUARIO = 'http://localhost:8082/api/v1/pagamentos/por-usuario';
+  private URL_MONTANTE_MAIOR_MENOR_ANO = 'http://localhost:8082/api/v1/montante/maior-menor-ano';
 
   constructor(private httpClient: HttpClient) { }
 
@@ -65,5 +66,11 @@ export class PagamentosService {
   deletePagamento(id: number): Observable<Object> {
     return this.httpClient.delete(`${this.URL_PAGAMENTO}/${id}`);
   }  
+
+  /* OPERAÇÕES MONTANTE */
+
+  getMaiorMenorAnoUsuario(idUsuario: number): Observable<number[]> {
+    return this.httpClient.get<number[]>(`${this.URL_MONTANTE_MAIOR_MENOR_ANO}/${idUsuario}`);
+  }
 
 }

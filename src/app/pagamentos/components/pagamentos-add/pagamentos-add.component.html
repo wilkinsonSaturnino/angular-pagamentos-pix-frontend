@@ -8,16 +8,9 @@
         </div>
 
         <div class="mb-3">
-            <label class="mb-3">Nome do Destinatário</label>
-            <input id="nomeDestinatario" type="text" class="form-control" name="nomeDestinatario"
-                [(ngModel)] = "pagamento.nomeDestinatario" maxlength="50" >
-        </div>
-
-        <div class="mb-3">
-            <label class="mb-3">CPF</label>
-            <input id="cpf" type="text" class="form-control" name="cpf"
-                [(ngModel)] = "pagamento.cpf" mask="000.000.000-00" placeholder="000.000.000-00">
-        </div>
+            <input id="cpf" type="text" class="form-control" name="cpf" disabled
+                [(ngModel)] = "pessoa.cpf">
+        </div>        
 
         <div class="mb-3">
             <label class="mb-3">Chave PIX</label>
@@ -42,7 +35,7 @@
             <label class="mb-3">Descrição</label>
             <input id="descricao" type="text" class="form-control" name="descricao"
                 [(ngModel)] = "pagamento.descricao" maxlength="80">
-        </div>        
+        </div>
 
         <button type="submit" class="btn btn-primary me-2">Salvar</button>
         <button type="button" class="btn btn-secondary" (click)="goToUsuariosFind()">Cancelar</button>

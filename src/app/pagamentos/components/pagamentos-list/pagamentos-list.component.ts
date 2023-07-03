@@ -29,13 +29,14 @@ export class PagamentosListComponent implements OnInit {
       }, error => console.log(error));
 
     this.listarPagamentosPorUsuario();
+    
   }
 
   private listarPagamentosPorUsuario() {
     this.pagamentosService.getPagamentosByUsuario(this.idPessoa).subscribe(pagamento => {
       this.pagamentos = pagamento;
       /* Ordena o Array de objetos por Destinatário */
-      this.pagamentos.sort((a, b) => (a.nomeDestinatario > b.nomeDestinatario) ? 1 : -1);
+      this.pagamentos.sort((a, b) => (a.pessoa.nome > b.pessoa.nome) ? 1 : -1);
     });
   }
 

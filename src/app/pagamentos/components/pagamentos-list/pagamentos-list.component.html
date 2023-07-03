@@ -5,13 +5,17 @@
         <input id="nome" type="text" class="form-control" name="nome" disabled
             [(ngModel)] = "pessoa.nome">
     </div>
+    <div class="mb-3">
+        <input id="cpf" type="text" class="form-control" name="cpf" disabled
+            [(ngModel)] = "pessoa.cpf">
+    </div>    
     <div class="row">
         <div class="col-sm">
             <table *ngIf="pagamentos.length > 0" class="table table-striped">
                 <thead>
                     <tr>
                         <th>Destinatário</th>
-                        <th>CPF</th>
+                        <th>CPF Destinatário</th>
                         <th>Chave PIX</th>
                         <th>Valor</th>
                         <th>Data de Pagamento</th>
@@ -21,8 +25,8 @@
                 </thead>
                 <tbody>
                     <tr *ngFor = "let pagamento of pagamentos">
-                        <td> {{ pagamento.nomeDestinatario }} </td>
-                        <td> {{ pagamento.cpf }} </td>
+                        <td> {{ pagamento.pessoa.nome }} </td>
+                        <td> {{ pagamento.pessoa.cpf }} </td>
                         <td> {{ pagamento.chavePix }} </td>
                         <td> {{ pagamento.valor | currency:'R$' }} </td>
                         <td> {{ pagamento.dataPagamento | date:"dd/MM/yyyy" }} </td>

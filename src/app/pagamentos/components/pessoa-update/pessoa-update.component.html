@@ -9,22 +9,10 @@
         </div>
 
         <div class="mb-3">
-            <label class="mb-3">Agência</label>
-            <input id="agencia" type="text" class="form-control" name="agencia"
-                [(ngModel)] = "pessoa.agencia">
+            <label class="mb-3">CPF</label>
+            <input id="cpf" type="text" class="form-control" name="cpf"
+                [(ngModel)] = "pessoa.cpf" mask="000.000.000-00" placeholder="000.000.000-00">
         </div>
-
-        <div class="mb-3">
-            <label class="mb-3">Conta</label>
-            <input id="conta" type="text" class="form-control" name="conta"
-                [(ngModel)] = "pessoa.conta">
-        </div>
-
-        <div class="mb-3">
-            <label class="mb-3">Dígito</label>
-            <input id="digito" type="text" class="form-control" name="digito"
-                [(ngModel)] = "pessoa.digito">
-        </div>        
 
         <button type="submit" class="btn btn-primary me-2">Salvar</button>
         <button type="button" class="btn btn-secondary" (click)="goToUsuarioList()">Cancelar</button>

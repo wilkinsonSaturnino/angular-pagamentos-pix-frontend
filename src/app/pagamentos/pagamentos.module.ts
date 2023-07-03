@@ -11,6 +11,9 @@ import { PessoaUpdateComponent } from './components/pessoa-update/pessoa-update.
 import { PessoaFindComponent } from './components/pessoa-find/pessoa-find.component';
 import { PagamentosUpdateComponent } from './components/pagamentos-update/pagamentos-update.component';
 import { NgxMaskModule } from 'ngx-mask';
+import { ContasAddComponent } from './components/contas-add/contas-add.component';
+import { ContasListComponent } from './components/contas-list/contas-list.component';
+import { ContasUpdateComponent } from './components/contas-update/contas-update.component';
 
 
 @NgModule({
@@ -21,7 +24,10 @@ import { NgxMaskModule } from 'ngx-mask';
     PessoaAddComponent, 
     PessoaUpdateComponent, 
     PessoaFindComponent, 
-    PagamentosUpdateComponent
+    PagamentosUpdateComponent, 
+    ContasAddComponent, 
+    ContasListComponent, 
+    ContasUpdateComponent
   ],
   imports: [
     CommonModule,

@@ -40,6 +40,10 @@ export class PessoaFindComponent implements OnInit {
     this.router.navigate(['/pagamentos-add', id]);
   }
 
+  goToContasAdd(id: number): void {
+    this.router.navigate(['/contas-add', id]);
+  }
+
   goToMontantePorMes(idUsuario: number) {
     this.router.navigate(['/montante-por-mes', idUsuario]);
   }
